@@ -10,7 +10,8 @@ function init(){
 
 var clicked;
 var levelSpeed;
-var speed = 2000;
+var startSpeed = 1500;
+var speed = startSpeed;
 var score = 0;
 var level = 1;
 var changeLevelInt;
@@ -60,13 +61,16 @@ function changeLevel(){
       clearInterval(levelSpeed);
       level++;
       getLevel(level)
+      speed-=Math.floor(speed*0.2)
       console.log(speed,'speed');
-      speed-=500;
-      if(speed<0){
-        gameOver();
+      if(speed<=300){
+        $('.gamecell').removeClass('active');
+        clearInterval(changeLevelInt);
+        clearInterval(levelSpeed);
+        return;
       }
       gameSpeed(speed)
-    },20000);
+    },10000);
 }
 
 
@@ -94,7 +98,7 @@ function startGame(){
     e.preventDefault();
     level = 1;
     score = 0;
-    speed = 2000;
+    speed = startSpeed;
     setScore(score);
     getLevel(level);
     console.log(level,score,speed);
