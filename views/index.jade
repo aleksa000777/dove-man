@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  .row
+    .col-sm-12
+      h2.title Dove care + Man
+  .row
+    .content.col-sm-12
+      .row.col-sm-12.main-info
+        .col-sm-3.score
+          h1 score
+          p.score-number
+        .col-sm-3
+          h1 level
+          p.level-number
+        .col-sm-3
+          button.start.btn-success START!
+        .col-sm-3
+          button.stop.btn-danger STOP!
+      .row.col-sm-12
+        .game-board
+          .row
+            .col-sm-4.gamecell.1-1
+              h1.cell 1-1
+            .col-sm-4.gamecell.1-2
+              h1.cell 1-2
+            .col-sm-4.gamecell.1-3
+              h1.cell 1-3
+          .row
+            .col-sm-4.gamecell.2-1
+              h1.cell 2-1
+            .col-sm-4.gamecell.2-2
+              h1.cell 2-2
+            .col-sm-4.gamecell.2-3
+              h1.cell 2-3
+          .row
+            .col-sm-4.gamecell.3-1
+              h1.cell 3-1
+            .col-sm-4.gamecell.3-2
+              h1.cell 3-2
+            .col-sm-4.gamecell.3-3
+              h1.cell 3-3
+      .row.game-over
+        h1 game over
+        
+  

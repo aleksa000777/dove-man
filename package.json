@@ -1,0 +1,43 @@
+{
+  "name": "dove-man",
+  "description": "dove-man",
+  "version": "0.0.1",
+  "author": "aleksa000777",
+  "ava": {
+    "verbose": "true"
+  },
+  "bugs": "https://github.com/aleksa000777/dove-man/issues",
+  "dependencies": {
+    "babel-preset-es2015": "6.x",
+    "babel-preset-stage-2": "6.x",
+    
+    
+    "lost": "6.x",
+    "postcss-cssnext": "2.6.x",
+    "postcss-import": "8.x",
+    "posthtml-jade": "0.8.x",
+    "posthtml-md": "1.x",
+    
+    "posthtml-retext": "0.1.x",
+    "retext-smartypants": "1.x",
+    "rucksack-css": "0.8.x",
+    "sugarss": "0.1.x"
+  },
+  "devDependencies": {
+    "ava": "0.15.x",
+    "rimraf": "2.5.x",
+    "snazzy": "4.x",
+    "spike-core": "0.8.x",
+    "standard": "7.x"
+  },
+  "homepage": "https://github.com/aleksa000777/dove-man",
+  "main": "app.js",
+  "private": "true",
+  "repository": "https://github.com/aleksa000777/dove-man",
+  "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "precommit": "npm run lint -s",
+    "pretest": "npm run lint -s",
+    "test": "NODE_ENV=test ava"
+  }
+}
