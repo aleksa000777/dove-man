@@ -61,9 +61,9 @@ function changeLevel(){
       clearInterval(levelSpeed);
       level++;
       getLevel(level)
-      speed-=Math.floor(speed*0.2)
+      speed-=Math.floor(speed*0.18)
       console.log(speed,'speed');
-      if(speed<=300){
+      if(speed<=350){
         $('.gamecell').removeClass('active');
         clearInterval(changeLevelInt);
         clearInterval(levelSpeed);
