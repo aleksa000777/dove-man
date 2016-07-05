@@ -39,7 +39,7 @@ function game(){
 
 
 function random(){
-  return Math.floor(Math.random() * 3) + 1;
+  return Math.floor(Math.random() * 4) + 1;
 }
 
 function getRandomCell(){
