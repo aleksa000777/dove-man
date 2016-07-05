@@ -1,6 +1,8 @@
 $(document).ready(function(){
   init();
+  document.onmousemove = updateAvatarPosition;
 })
+
 
 function init(){
   startGame();
@@ -17,8 +19,10 @@ var level = 1;
 var changeLevelInt;
 
 function game(){
+  console.log('game');
   $('.gamecell').on('click', function(e){
     e.preventDefault();
+    console.log('click');
     let getCell = $(this);
     if($(getCell).hasClass('active')){
       if(!clicked){
@@ -85,6 +89,7 @@ function getLevel(level){
 function gameOver(){
   $('.stop').on('click', function(e){
     e.preventDefault();
+    $("#swatter").css('display', 'none');
     $('.gamecell').removeClass('active');
     clearInterval(changeLevelInt);
     clearInterval(levelSpeed);
@@ -96,6 +101,10 @@ function gameOver(){
 function startGame(){
   $('.start').on('click', function(e){
     e.preventDefault();
+    $("#swatter").css('display', 'inline-block');
+    $('.gamecell').removeClass('active');
+    clearInterval(changeLevelInt);
+    clearInterval(levelSpeed);
     level = 1;
     score = 0;
     speed = startSpeed;
@@ -105,4 +114,10 @@ function startGame(){
     gameSpeed(speed);
     changeLevel();
   })
+}
+
+
+function updateAvatarPosition(e)
+{
+    $("#swatter").css({"left" : e.pageX-100, "top" : e.pageY});
 }

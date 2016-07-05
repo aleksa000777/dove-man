@@ -2,14 +2,32 @@ body
   padding: 50px
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif
 
-
+.container
+  padding: 1% 10%
 .gamecell
-  background-color: lightblue
+  position: relative
   height: 130px
   border: 1px solid black
+  z-index: 9999
+  // width: 150px
 
 .active
-  background-color: lightgreen
+  background-image: url('/img/huge-fly.png')
+  background-size: contain
+  background-repeat: no-repeat
 
 .smashed
-  background-color: pink
+  background-image: url('/img/smash.png')
+  background-size: contain
+  background-repeat: no-repeat
+
+
+#swatter
+  position: absolute
+  display: none
+  z-index: 9998
+  background-position: 20px 0
+
+.start, .stop
+  position: absolute
+  z-index: 9999
