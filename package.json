@@ -35,7 +35,7 @@
   "private": "true",
   "repository": "https://github.com/aleksa000777/dove-man",
   "scripts": {
-    "start": "node app.js",
+    "start": "node ./app.js",
     "lint": "standard --verbose | snazzy",
     "precommit": "npm run lint -s",
     "pretest": "npm run lint -s",
