@@ -28,6 +28,7 @@
     "rimraf": "2.5.x",
     "snazzy": "4.x",
     "spike-core": "0.8.x",
+    "spike": "^0.6.0",
     "standard": "7.x"
   },
   "homepage": "https://github.com/aleksa000777/dove-man",
@@ -35,7 +36,6 @@
   "private": "true",
   "repository": "https://github.com/aleksa000777/dove-man",
   "scripts": {
-    "start": "node ./app.js",
     "lint": "standard --verbose | snazzy",
     "precommit": "npm run lint -s",
     "pretest": "npm run lint -s",
